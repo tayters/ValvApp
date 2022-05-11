@@ -1,0 +1,90 @@
+﻿<UserControl x:Class="ValvApp00.PlotTab"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:oxy="http://oxyplot.org/wpf"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" Unloaded="UserControl_Unloaded" Loaded="UserControl_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="5*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="10*" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Column="0" Grid.Row="0" Margin="0,0,0,0">
+            <StackPanel Margin="0,0,0,0">
+                <Button x:Name="start_button" Content="Start" Margin="10,10,10,10" Click="start_button_Click"/>
+                <Button x:Name="stop_button" Content="Stop" Margin="10,10,10,10" Click="stop_button_Click"/>
+            </StackPanel>
+        </Grid>
+        <Label Grid.Column="1" Grid.Row ="0" Content="Mussel Gape Activity" FontSize="40" HorizontalAlignment="Center"/>
+        
+        <Grid Grid.Column="0" Grid.Row="1" Margin="0,0,0,0">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+                    <Label x:Name="label_disp1" Grid.Row="0"  Content="{Binding Disp[0], Mode=OneWay}"  Margin="0,4,0,0" HorizontalAlignment="Center" FontSize="30" />
+                    <Label x:Name="label_disp2" Grid.Row="1" Content="{Binding Disp[1], Mode=OneWay}"  Margin="0,4,0,0" HorizontalAlignment="Center"  FontSize="30" />
+                    <Label x:Name="label_disp3" Grid.Row="2" Content="{Binding Disp[2], Mode=OneWay}"  Margin="0,4,0,0" HorizontalAlignment="Center"  FontSize="30"/>
+                    <Label x:Name="label_disp4" Grid.Row="3" Content="{Binding Disp[3], Mode=OneWay}"  Margin="0,4,0,0" HorizontalAlignment="Center"  FontSize="30"/>
+                    <Label x:Name="label_disp5" Grid.Row="4" Content="{Binding Disp[4], Mode=OneWay}"  Margin="0,4,0,0" HorizontalAlignment="Center"  FontSize="30"/>
+                    <Label x:Name="label_disp6" Grid.Row="5" Content="{Binding Disp[5], Mode=OneWay}"  Margin="0,4,0,0" HorizontalAlignment="Center"  FontSize="30"/>
+                    <Label x:Name="label_disp7" Grid.Row="6" Content="{Binding Disp[6], Mode=OneWay}"  Margin="0,4,0,0" HorizontalAlignment="Center"  FontSize="30"/>
+                </Grid>
+            </Grid>
+
+        <Grid Grid.Column="1" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+                    <oxy:PlotView Grid.Row="0" Model="{Binding PlotsA[0].PlotModel}"/>
+                    <oxy:PlotView Grid.Row="1" Model="{Binding PlotsA[1].PlotModel}"/>
+                    <oxy:PlotView Grid.Row="2" Model="{Binding PlotsA[2].PlotModel}"/>
+                    <oxy:PlotView Grid.Row="3" Model="{Binding PlotsA[3].PlotModel}"/>
+                    <oxy:PlotView Grid.Row="4" Model="{Binding PlotsA[4].PlotModel}"/>
+                    <oxy:PlotView Grid.Row="5" Model="{Binding PlotsA[5].PlotModel}"/>
+                    <oxy:PlotView Grid.Row="6" Model="{Binding PlotsA[6].PlotModel}"/>
+                </Grid>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+                <oxy:PlotView Grid.Row="0" Model="{Binding PlotsB[0].PlotModel}"/>
+                <oxy:PlotView Grid.Row="1" Model="{Binding PlotsB[1].PlotModel}"/>
+                <oxy:PlotView Grid.Row="2" Model="{Binding PlotsB[2].PlotModel}"/>
+                <oxy:PlotView Grid.Row="3" Model="{Binding PlotsB[3].PlotModel}"/>
+                <oxy:PlotView Grid.Row="4" Model="{Binding PlotsB[4].PlotModel}"/>
+                <oxy:PlotView Grid.Row="5" Model="{Binding PlotsB[5].PlotModel}"/>
+                <oxy:PlotView Grid.Row="6" Model="{Binding PlotsB[6].PlotModel}"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

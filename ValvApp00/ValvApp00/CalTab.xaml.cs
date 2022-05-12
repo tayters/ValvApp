@@ -107,12 +107,14 @@ namespace ValvApp00
             Thread.Sleep(1000);
             for (int d = 9; d <= 25; d++)
             {
+                UsbControl.SendString("led");
                 Thread.Sleep(1000);
                 cvm.Cal_disp = d;
 
                 Stepmm(d);
 
                 Thread.Sleep(1000);
+                UsbControl.SendString("led");
                 /*
                 if (MessageBox.Show("Set distance to: " + d.ToString() + "mm",
                     "Confirmation",
@@ -212,7 +214,7 @@ namespace ValvApp00
 
         private void write_button_Click(object sender, RoutedEventArgs e)
         {
-            UsbControl.SendString("cal");
+            UsbControl.SendString("cal"+cvm.Coefficients);
         }
 
 

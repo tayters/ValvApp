@@ -40,9 +40,11 @@
             <Button x:Name="step_button" Content="Step" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" Width="88" Click="step_button_Click"/>
             <TextBox x:Name="step_textBox" Text = "{Binding Steps, Mode=TwoWay}" HorizontalAlignment="Left" Margin="10,10,10,10" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
             <Label x:Name="steps_Label" Content = "{Binding PositionSteps, Mode=OneWay}" ContentStringFormat = "Position: {0} steps" HorizontalAlignment="Left"/>
+            <Button x:Name="write_button" Content="Write Cal" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" Width="88" Click="write_button_Click"/>
             <Label x:Name="mm_Label" Content = "{Binding Positionmm, Mode=OneWay}"   ContentStringFormat = "     {0:F2}mm" HorizontalAlignment="Left"  />
             <Button x:Name="home_button" Content="Home" Margin="10,10,10,10" Click="home_button_Click"/>
             <Button x:Name="zero_button" Content="zero" Margin="10,10,10,10" Click="zero_button_Click"/>
+            <Button x:Name="write_button" Content="Write Cal" HorizontalAlignment="Left" Margin="10,10,10,10" VerticalAlignment="Top" Width="88" Click="write_button_Click"/>
         </StackPanel>
         <DataGrid x:Name="calGrid" AutoGenerateColumns="False" Grid.Column="1">
             <DataGrid.Columns>

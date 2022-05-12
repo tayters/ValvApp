@@ -210,6 +210,11 @@ namespace ValvApp00
             cvm.Positionmm = 5;
         }
 
-        
+        private void write_button_Click(object sender, RoutedEventArgs e)
+        {
+            UsbControl.SendString("cal");
+        }
+
+
     }
 }

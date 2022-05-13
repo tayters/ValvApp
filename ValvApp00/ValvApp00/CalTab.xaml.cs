@@ -215,6 +215,7 @@ namespace ValvApp00
         private void write_button_Click(object sender, RoutedEventArgs e)
         {
             UsbControl.SendString("cal"+cvm.Coefficients);
+            //UsbControl.SendString("cal" + "1,2,3");
         }
 
 

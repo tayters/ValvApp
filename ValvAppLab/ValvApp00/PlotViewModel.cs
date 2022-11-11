@@ -38,9 +38,9 @@ namespace ValvApp00
                 
         public void SetupModel()
         {
-            PlotsA = new Plot[7];
-            PlotsB = new Plot[7];
-            for (int i = 0; i < 7; i++)
+            PlotsA = new Plot[6];
+            PlotsB = new Plot[6];
+            for (int i = 0; i < 6; i++)
             {
                 PlotsA[i] = new Plot(i);
                 PlotsB[i] = new Plot(i);
@@ -113,7 +113,7 @@ namespace ValvApp00
 
         public void ShowSeries()
         {
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < 6; i++)
             {
                 PlotsA[i].PlotModel.Series[0].IsVisible = true;
                 PlotsB[i].PlotModel.Series[0].IsVisible = true;
@@ -125,13 +125,13 @@ namespace ValvApp00
 
         internal void UpdateDisp(double d, int ser)
         {
-            Disp[ser] = d.ToString();
+            Disp[ser] = d.ToString()+"mm";
             RaisePropertyChanged("Disp");
         }
 
         public void UpdateAll()
         {
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < 6; i++)
             {
                 this.PlotsA[i].PlotModel.InvalidatePlot(true);
                 this.PlotsB[i].PlotModel.InvalidatePlot(true);

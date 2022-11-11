@@ -4759,11 +4759,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jrap017\\OneDrive - The University of Auckland\\Documents\\ValvAppLab\\ValvApp00\\ValvApp00.csproj",
+      "projectUniqueName": "C:\\Users\\jrap017\\OneDrive - The University of Auckland\\Documents\\ValvApp\\ValvAppLab\\ValvApp00\\ValvApp00.csproj",
       "projectName": "ValvApp00",
-      "projectPath": "C:\\Users\\jrap017\\OneDrive - The University of Auckland\\Documents\\ValvAppLab\\ValvApp00\\ValvApp00.csproj",
+      "projectPath": "C:\\Users\\jrap017\\OneDrive - The University of Auckland\\Documents\\ValvApp\\ValvAppLab\\ValvApp00\\ValvApp00.csproj",
       "packagesPath": "C:\\Users\\jrap017\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jrap017\\OneDrive - The University of Auckland\\Documents\\ValvAppLab\\ValvApp00\\obj\\",
+      "outputPath": "C:\\Users\\jrap017\\OneDrive - The University of Auckland\\Documents\\ValvApp\\ValvAppLab\\ValvApp00\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jrap017\\AppData\\Roaming\\NuGet\\NuGet.Config",

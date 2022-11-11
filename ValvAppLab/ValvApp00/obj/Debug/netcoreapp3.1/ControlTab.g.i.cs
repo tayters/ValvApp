@@ -204,7 +204,7 @@ namespace ValvApp00 {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ValvApp00;V1.0.0.0;component/controltab.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ValvApp00;component/controltab.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\ControlTab.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

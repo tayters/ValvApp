@@ -65,7 +65,14 @@ namespace ValvApp00
             UsbControl.writer.Flush();
         }
 
-      
+        private void reset_button_Click(object sender, RoutedEventArgs e)
+        {
+            plot_timer.Stop();
+            UsbControl.reader.Flush();
+            UsbControl.writer.Flush();
+        }
+
+
         private void UserControl_Unloaded(object sender, RoutedEventArgs e)
         {
             plot_timer.Stop();

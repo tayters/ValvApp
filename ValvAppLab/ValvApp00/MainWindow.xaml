@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:co="clr-namespace:ValvApp00" xmlns:pt="clr-namespace:ValvApp00"
         xmlns:ct="clr-namespace:ValvApp00" mc:Ignorable="d"
-        Title="MainWindow" WindowStartupLocation="CenterScreen" WindowState="Maximized">
+        Title="ValvApp Lab" WindowStartupLocation="CenterScreen" WindowState="Maximized" Icon="/mussels.png" Background="White" OpacityMask="Black">
     <TabControl>
         <TabItem x:Name="Control_TabItem" Header="Control">
             <co:ControlTab/>

@@ -9,22 +9,27 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="5*" />
+            <ColumnDefinition Width="7*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="1*" />
             <RowDefinition Height="10*" />
         </Grid.RowDefinitions>
-        <Grid Grid.Column="0" Grid.Row="0" Margin="0,0,0,0">
-            <StackPanel Margin="0,0,0,0">
-                <Button x:Name="start_button" Content="Start" Margin="10,10,10,10" Click="start_button_Click"/>
-                <Button x:Name="stop_button" Content="Stop" Margin="10,10,10,10" Click="stop_button_Click"/>
+        <Grid Grid.Column="0" Grid.Row="0" Margin="0,0,50,0">
+            <StackPanel Margin="0,0,10,0">
+                <Button x:Name="start_button" Content="Start" Margin="5,5,5,5" Click="start_button_Click"/>
+                <Button x:Name="stop_button" Content="Stop" Margin="5,5,5,5" Click="stop_button_Click"/>
+                <Button x:Name="reset_button" Content="Reset" Margin="5,5,5,5" Click="reset_button_Click"/>
             </StackPanel>
         </Grid>
-        <Label Grid.Column="1" Grid.Row ="0" Content="Mussel Gape Activity" FontSize="40" HorizontalAlignment="Center"/>
+            <Label Grid.Column="1" Grid.Row ="0" Content="Mussel Gape Activity" FontSize="40" HorizontalAlignment="Center"/>
         
         <Grid Grid.Column="0" Grid.Row="1" Margin="0,0,0,0">
                 <Grid>
+                    <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="1.2*" />
+                </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="1*" />
                         <RowDefinition Height="1*" />
@@ -32,15 +37,19 @@
                         <RowDefinition Height="1*" />
                         <RowDefinition Height="1*" />
                         <RowDefinition Height="1*" />
-                        <RowDefinition Height="1*" />
-                    </Grid.RowDefinitions>
-                    <Label x:Name="label_disp1" Grid.Row="0"  Content="{Binding Disp[0], Mode=OneWay}"  Margin="0,4,0,0" HorizontalAlignment="Center" FontSize="30" />
-                    <Label x:Name="label_disp2" Grid.Row="1" Content="{Binding Disp[1], Mode=OneWay}"  Margin="0,4,0,0" HorizontalAlignment="Center"  FontSize="30" />
-                    <Label x:Name="label_disp3" Grid.Row="2" Content="{Binding Disp[2], Mode=OneWay}"  Margin="0,4,0,0" HorizontalAlignment="Center"  FontSize="30"/>
-                    <Label x:Name="label_disp4" Grid.Row="3" Content="{Binding Disp[3], Mode=OneWay}"  Margin="0,4,0,0" HorizontalAlignment="Center"  FontSize="30"/>
-                    <Label x:Name="label_disp5" Grid.Row="4" Content="{Binding Disp[4], Mode=OneWay}"  Margin="0,4,0,0" HorizontalAlignment="Center"  FontSize="30"/>
-                    <Label x:Name="label_disp6" Grid.Row="5" Content="{Binding Disp[5], Mode=OneWay}"  Margin="0,4,0,0" HorizontalAlignment="Center"  FontSize="30"/>
-                    <Label x:Name="label_disp7" Grid.Row="6" Content="{Binding Disp[6], Mode=OneWay}"  Margin="0,4,0,0" HorizontalAlignment="Center"  FontSize="30"/>
+                     </Grid.RowDefinitions>
+                    <Label x:Name="label_chan1" Grid.Row="0" Grid.Column ="0" Content="Chan 1:" HorizontalAlignment="Center" VerticalAlignment="Center"  FontSize="20" />
+                    <Label x:Name="label_chan2" Grid.Row="1" Grid.Column ="0" Content="Chan 2:" HorizontalAlignment="Center" VerticalAlignment="Center"  FontSize="20" />
+                    <Label x:Name="label_chan3" Grid.Row="2" Grid.Column ="0" Content="Chan 3:" HorizontalAlignment="Center" VerticalAlignment="Center"  FontSize="20" />
+                    <Label x:Name="label_chan4" Grid.Row="3" Grid.Column ="0" Content="Chan 4:" HorizontalAlignment="Center" VerticalAlignment="Center"  FontSize="20" />
+                    <Label x:Name="label_chan5" Grid.Row="4" Grid.Column ="0" Content="Chan 5:" HorizontalAlignment="Center" VerticalAlignment="Center"  FontSize="20" />
+                    <Label x:Name="label_chan6" Grid.Row="5" Grid.Column ="0" Content="Chan 6:" HorizontalAlignment="Center" VerticalAlignment="Center"  FontSize="20" />
+                    <Label x:Name="label_disp1" Grid.Row="0" Grid.Column ="1" Content="{Binding Disp[0], Mode=OneWay}" HorizontalAlignment="Center" VerticalAlignment="Center"  FontSize="20" />
+                    <Label x:Name="label_disp2" Grid.Row="1" Grid.Column ="1" Content="{Binding Disp[1], Mode=OneWay}" HorizontalAlignment="Center" VerticalAlignment="Center"  FontSize="20" />
+                    <Label x:Name="label_disp3" Grid.Row="2" Grid.Column ="1" Content="{Binding Disp[2], Mode=OneWay}" HorizontalAlignment="Center" VerticalAlignment="Center"  FontSize="20"/>
+                    <Label x:Name="label_disp4" Grid.Row="3" Grid.Column ="1" Content="{Binding Disp[3], Mode=OneWay}" HorizontalAlignment="Center" VerticalAlignment="Center"  FontSize="20"/>
+                    <Label x:Name="label_disp5" Grid.Row="4" Grid.Column ="1" Content="{Binding Disp[4], Mode=OneWay}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" />
+                    <Label x:Name="label_disp6" Grid.Row="5" Grid.Column ="1" Content="{Binding Disp[5], Mode=OneWay}" HorizontalAlignment="Center" VerticalAlignment="Center"  FontSize="20"/>
                 </Grid>
             </Grid>
 
@@ -57,7 +66,7 @@
                         <RowDefinition Height="1*" />
                         <RowDefinition Height="1*" />
                         <RowDefinition Height="1*" />
-                        <RowDefinition Height="1*" />
+                        
                     </Grid.RowDefinitions>
                     <oxy:PlotView Grid.Row="0" Model="{Binding PlotsA[0].PlotModel}"/>
                     <oxy:PlotView Grid.Row="1" Model="{Binding PlotsA[1].PlotModel}"/>
@@ -65,7 +74,7 @@
                     <oxy:PlotView Grid.Row="3" Model="{Binding PlotsA[3].PlotModel}"/>
                     <oxy:PlotView Grid.Row="4" Model="{Binding PlotsA[4].PlotModel}"/>
                     <oxy:PlotView Grid.Row="5" Model="{Binding PlotsA[5].PlotModel}"/>
-                    <oxy:PlotView Grid.Row="6" Model="{Binding PlotsA[6].PlotModel}"/>
+                    
                 </Grid>
             <Grid Grid.Column="1">
                 <Grid.RowDefinitions>
@@ -75,7 +84,7 @@
                     <RowDefinition Height="1*" />
                     <RowDefinition Height="1*" />
                     <RowDefinition Height="1*" />
-                    <RowDefinition Height="1*" />
+                    
                 </Grid.RowDefinitions>
                 <oxy:PlotView Grid.Row="0" Model="{Binding PlotsB[0].PlotModel}"/>
                 <oxy:PlotView Grid.Row="1" Model="{Binding PlotsB[1].PlotModel}"/>
@@ -83,7 +92,7 @@
                 <oxy:PlotView Grid.Row="3" Model="{Binding PlotsB[3].PlotModel}"/>
                 <oxy:PlotView Grid.Row="4" Model="{Binding PlotsB[4].PlotModel}"/>
                 <oxy:PlotView Grid.Row="5" Model="{Binding PlotsB[5].PlotModel}"/>
-                <oxy:PlotView Grid.Row="6" Model="{Binding PlotsB[6].PlotModel}"/>
+                
             </Grid>
         </Grid>
     </Grid>

@@ -105,7 +105,7 @@ namespace ValvApp00
             UsbControl.SendString("sel" + (cvm.Cal_chan + 1).ToString());
 
             Thread.Sleep(1000);
-            for (int d = 9; d <= 25; d++)
+            for (int d = 9; d <= 20; d++)
             {
                 UsbControl.SendString("led");
                 Thread.Sleep(1000);
